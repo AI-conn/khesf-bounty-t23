@@ -1,0 +1,15 @@
+=== FIXED-BOUND CALIBRATION (calibration split only; no holdout leakage) ===
+  fast_operator    z in [2.3, 3.5], sd_floor=0.2
+  slow_operator    z in [2.3, 3.5], sd_floor=0.2
+
+=== HOLDOUT FAR / FRR (exact counts) ===
+  genuine self               FRR = 0.0000  (0/12 rejected)
+  fatigued self              FRR = 0.0000  (0/6 rejected)
+  all impostor               FAR = 0.0333  (1/30 accepted)
+  stranger                   FAR = 0.0556  (1/18 accepted)
+  parameter-matched mimic    FAR = 0.0000  (0/12 accepted)
+
+=== NxN CROSS-PROFILE SWAP MATRIX (holdout, normal kind) ===
+  enrolled\claimant      fast_operator     slow_operator
+  fast_operator             3/3 ACCEPT        0/3 REJECT
+  slow_operator             0/3 REJECT        3/3 ACCEPT
